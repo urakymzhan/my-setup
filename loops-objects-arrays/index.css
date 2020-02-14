@@ -1,0 +1,21 @@
+body {
+    padding-top: 200px;
+    text-align: center;
+    background: #c6cfd1;
+}
+h1 {
+    text-transform: uppercase;
+}
+
+.todo {
+    background: brown;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+
+li {
+    padding: 5px;
+}

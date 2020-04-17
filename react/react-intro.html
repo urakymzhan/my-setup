@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>React tutorial</title>
+    <!-- react cdn -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>React tutorial</h1>
+    <div id="react">
+    </div>
+    <div id="js">
+    </div>
+<script type="text/babel">
+    // React way of rendering and element 
+
+    function renderReact() {
+        const element = (
+            <div>
+                <h1> Hello , world! </h1>
+                <h2> {new Date().toLocaleTimeString()} </h2>
+            </div>
+        )
+        ReactDOM.render(element, document.getElementById('react'));
+    }
+    
+
+    // JS way of rendering element
+
+    function renderJS() {
+        const elementJS = `
+            <div>
+                <h1> Hello , world! </h1>
+                <h2> ${new Date().toLocaleTimeString()} </h2>
+            </div>
+        `
+
+        document.getElementById('js').innerHTML = elementJS;
+    }
+
+    setInterval(renderReact, 1000);
+    setInterval(renderJS, 1000);
+
+</script>
+</body>
+</html>
